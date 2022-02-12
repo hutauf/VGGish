@@ -18,7 +18,7 @@ def get_embeddings(filename=None, y=None, sr=None, **kw):
     return Z, get_timesteps(Z, pump, sampler)
 
 def get_embedding_model(model=None, pump=None, sampler=None, hop_duration=None,
-                        include_top=None, compress=None, weights=None,):
+                        include_top=None, compress=None, weights="audioset",):
     # make sure we have model, pump, and sampler
     # get the sampler with the proper frame sizes
     pump = pump or get_pump()
